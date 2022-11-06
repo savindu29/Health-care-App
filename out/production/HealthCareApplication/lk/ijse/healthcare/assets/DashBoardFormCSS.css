@@ -1,0 +1,13 @@
+#doctorbtn:hover,#patientBtn:hover,#paymentbtn:hover,#documentbtn:hover{
+    -fx-text-fill: #b6b6b6;
+    -fx-font-size: 22px;
+
+
+}
+#dashboardBtn:hover,#signOutBtn:hover{
+    -fx-text-fill: #b6b6b6;
+    -fx-font-size: 22px;
+}
+
+
+

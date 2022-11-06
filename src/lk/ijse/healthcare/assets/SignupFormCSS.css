@@ -1,0 +1,21 @@
+#backgroundRight{
+    -fx-background-color: linear-gradient(to top right, #2affff 0%, #68ff99 100%);
+    -fx-background-radius: 60 0 0 0;
+}
+#leftBackground{
+    -fx-background-color: linear-gradient(to top right, #2affff 0%, #68ff99 100%);
+}
+#shape1,#shape2{
+    -fx-background-color: linear-gradient(to top right, #2affff 0%, #68ff99 100%);
+    -fx-background-radius: 30;
+}
+#shape3,#shape4{
+    -fx-background-color: linear-gradient(to top right, #2affff 0%, #68ff99 100%);
+    -fx-background-radius: 30;
+}
+#imageBackground{
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+

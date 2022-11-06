@@ -1,0 +1,15 @@
+#leftBackground,#shape1,#shape2,#shape3{
+    -fx-background-color: linear-gradient(to top right, #2de7e7 0%, #68ff99 100%);
+}
+#rightBackground{
+    -fx-background-color: white;
+    -fx-background-radius: 60 0 0 0;
+}
+#pane1{
+    -fx-background-color: rgba(255, 255, 255, 0.47);
+    /*-fx-background-radius: 60;*/
+
+}
+#shape4,#shape5{
+    -fx-background-color:linear-gradient(to top right, #2de7e7 0%, #68ff99 100%);
+}

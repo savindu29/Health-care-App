@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1162.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.healthcare.controller.DefaultFormController">
+   <children>
+      <Pane layoutX="407.0" layoutY="30.0" prefHeight="314.0" prefWidth="702.0" style="-fx-border-color: linear-gradient(to top right, #2de7e7 0%, #68ff99 100%); -fx-border-radius: 60; -fx-border-color: #bcbbbb;" />
+      <Pane layoutX="34.0" layoutY="385.0" prefHeight="314.0" prefWidth="1076.0" style="-fx-border-color: linear-gradient(to top right, #2de7e7 0%, #68ff99 100%); -fx-border-radius: 60;" />
+      <Pane layoutX="39.0" layoutY="32.0" prefHeight="314.0" prefWidth="324.0" style="-fx-background-color: linear-gradient(to top right, #2de7e7 0%, #68ff99 100%); -fx-background-radius: 60;" />
+   </children>
+</AnchorPane>
