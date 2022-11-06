@@ -19,4 +19,3 @@ public class AppInitializer extends Application {
     primaryStage.show();
     }
 }
-// check commit 1
