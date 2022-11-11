@@ -1,15 +1,14 @@
 package lk.ijse.healthcare.controller;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.healthcare.bo.BoFactory;
 import lk.ijse.healthcare.bo.BoTypes;
+import lk.ijse.healthcare.bo.custom.AppointmentBo;
 import lk.ijse.healthcare.bo.custom.DoctorBo;
 import lk.ijse.healthcare.bo.custom.PatientBo;
+import lk.ijse.healthcare.dto.AppointmentDto;
 import lk.ijse.healthcare.dto.DoctorDto;
 import lk.ijse.healthcare.dto.PatientDto;
 import lk.ijse.healthcare.entity.Doctor;
@@ -28,8 +27,10 @@ public class AppointmentFormController {
     public TextField txtPatientTel;
     public TextField txtDoctorAddress;
     public TextField txtDoctorTel;
+    public TextField txtAppointmentNumber;
     private String sText= "";
     private DoctorBo boD = BoFactory.getInstance().getBo(BoTypes.DOCTOR);
+    private AppointmentBo boA = BoFactory.getInstance().getBo(BoTypes.APPOINTMENT);
     private PatientBo boP = BoFactory.getInstance().getBo(BoTypes.PATIENT);
     public void initialize(){
         loadCodes("");
@@ -91,5 +92,26 @@ public class AppointmentFormController {
     }
 
     public void saveBtnOnAction(ActionEvent actionEvent) {
+        AppointmentDto dto = new AppointmentDto(txtAppointmentNumber.getText(), (String) cmbDoctor.getSelectionModel().selectedItemProperty().getValue(),(String) cmbPatient.getSelectionModel().selectedItemProperty().getValue(),datePicker.getValue().toString());
+        try {
+            boolean isSaved =boA.saveAppointment(dto);
+            if (isSaved) {
+                clear();
+                new Alert(Alert.AlertType.INFORMATION, "Placed Appointment!..").show();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again!..").show();
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Try Again!..").show();
+        }
+    }
+    private void clear(){
+        txtDoctorTel.clear();
+        txtDoctor.clear();
+        txtDoctorAddress.clear();
+        txtPatientTel.clear();
+        txtPatient.clear();
+        txtPatientTel.clear();
+        txtAppointmentNumber.clear();
     }
 }

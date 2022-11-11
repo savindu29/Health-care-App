@@ -55,7 +55,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <DatePicker fx:id="datePicker" layoutX="747.0" layoutY="290.0" prefHeight="39.0" prefWidth="243.0" style="-fx-background-color: white;" />
+      <DatePicker fx:id="datePicker" layoutX="747.0" layoutY="290.0" prefHeight="39.0" prefWidth="243.0" />
       <ComboBox fx:id="cmbPatient" layoutX="76.0" layoutY="290.0" prefHeight="39.0" prefWidth="252.0" promptText="Select Patient" style="-fx-background-color: white; -fx-border-color: #bcbbbb;" />
       <ComboBox fx:id="cmbDoctor" layoutX="367.0" layoutY="290.0" prefHeight="39.0" prefWidth="252.0" promptText="Select Doctor" style="-fx-background-color: white; -fx-border-color: #bcbbbb;" />
       <TextField fx:id="txtPatientAddress" disable="true" layoutX="66.0" layoutY="500.0" prefHeight="39.0" prefWidth="271.0" promptText="Address" style="-fx-background-color: none; -fx-border-width: 1; -fx-border-color: #bcbbbb; -fx-border-radius: 30;">
@@ -98,7 +98,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAppoinmentNumber" disable="true" layoutX="66.0" layoutY="190.0" prefHeight="39.0" prefWidth="271.0" promptText="Appinoinment Number" style="-fx-background-color: none; -fx-border-width: 1; -fx-border-color: #bcbbbb; -fx-border-radius: 30;">
+      <TextField fx:id="txtAppointmentNumber" layoutX="66.0" layoutY="190.0" prefHeight="39.0" prefWidth="271.0" promptText="Appinoinment Number" style="-fx-background-color: none; -fx-border-width: 1; -fx-border-color: #bcbbbb; -fx-border-radius: 30;">
          <font>
             <Font size="17.0" />
          </font>
