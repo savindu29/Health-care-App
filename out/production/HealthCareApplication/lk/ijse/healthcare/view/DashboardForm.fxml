@@ -22,7 +22,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="paymentbtn" layoutX="18.0" layoutY="481.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="247.0" style="-fx-background-color: none;" text="Payments" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="newAppointmentbtn" layoutX="18.0" layoutY="481.0" mnemonicParsing="false" onAction="#newAppointmentBtnOnAction" prefHeight="64.0" prefWidth="247.0" style="-fx-background-color: none;" text="New Appointment" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

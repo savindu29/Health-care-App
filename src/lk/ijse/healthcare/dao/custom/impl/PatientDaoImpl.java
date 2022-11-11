@@ -17,12 +17,12 @@ public class PatientDaoImpl implements PatientDao {
 
     @Override
     public boolean update(Patient patient) throws SQLException, ClassNotFoundException {
-        return  CrudUtil.execute("UPDATE patient SET name=?, address=?, contact=? WHERE id =?", patient.getName(), patient.getAddress(), patient.getContact(), patient.getId());
+        return  CrudUtil.execute("UPDATE patient SET name=?, address=?, contact=? WHERE patient_id =?", patient.getName(), patient.getAddress(), patient.getContact(), patient.getId());
     }
 
     @Override
     public boolean delete(String s) throws SQLException, ClassNotFoundException {
-        return CrudUtil.execute("DELETE FROM patient WHERE id=?",s);
+        return CrudUtil.execute("DELETE FROM patient WHERE patient_id=?",s);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class PatientDaoImpl implements PatientDao {
         String searchText = "%"+text+"%";
 
 
-        ResultSet rst = CrudUtil.execute("SELECT * FROM patient WHERE name LIKE  ? || address LIKE ? || contact LIKE ? ||  id LIKE ? ",searchText,searchText,searchText ,searchText);
+        ResultSet rst = CrudUtil.execute("SELECT * FROM patient WHERE name LIKE  ? || address LIKE ? || contact LIKE ? ||  patient_id LIKE ? ",searchText,searchText,searchText ,searchText);
         ArrayList<Patient> patients = new ArrayList<>();
         while (rst.next()){
             patients.add(new Patient(rst.getString(1),

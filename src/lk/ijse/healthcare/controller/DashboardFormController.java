@@ -43,6 +43,10 @@ public class DashboardFormController {
     public void doctorBtnOnAction(ActionEvent actionEvent) throws IOException {
         loadForm("DoctorForm");
     }
+    public void newAppointmentBtnOnAction(ActionEvent actionEvent) throws IOException {
+        loadForm("AppointmentForm");
+    }
+
 
     public void patientBtnOnAction(ActionEvent actionEvent) throws IOException {
         loadForm("PatientForm");

@@ -37,6 +37,7 @@ public class PatientFormController {
     public TableColumn colContact;
     public TableColumn colOption;
     public Button savePatientBtn;
+
     private String sText= "";
    private PatientBo bo = BoFactory.getInstance().getBo(BoTypes.PATIENT);
     public void initialize(){
