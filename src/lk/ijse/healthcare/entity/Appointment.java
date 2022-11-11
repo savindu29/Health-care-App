@@ -1,14 +1,27 @@
-package lk.ijse.healthcare.dto;
+package lk.ijse.healthcare.entity;
 
 public class Appointment {
-    String doctorId;
-    String patientId;
-    String date;
+    private String appointmentNumber;
+    private String doctorId;
+    private String patientId;
+    private String date;
 
-    public Appointment(String doctorId, String patientId, String date) {
+    public Appointment(String appointmentNumber, String doctorId, String patientId, String date) {
+        this.appointmentNumber = appointmentNumber;
         this.doctorId = doctorId;
         this.patientId = patientId;
         this.date = date;
+    }
+
+    public Appointment() {
+    }
+
+    public String getAppointmentNumber() {
+        return appointmentNumber;
+    }
+
+    public void setAppointmentNumber(String appointmentNumber) {
+        this.appointmentNumber = appointmentNumber;
     }
 
     public String getDoctorId() {

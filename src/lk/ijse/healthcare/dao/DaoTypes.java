@@ -1,5 +1,5 @@
 package lk.ijse.healthcare.dao;
 
 public enum DaoTypes {
-    DOCTOR,PATIENT
+    DOCTOR,PATIENT,APPOINTMENT
 }

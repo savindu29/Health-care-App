@@ -1,5 +1,6 @@
 package lk.ijse.healthcare.dao;
 
+import lk.ijse.healthcare.dao.custom.impl.AppointmentDaoImpl;
 import lk.ijse.healthcare.dao.custom.impl.DoctorDaoImpl;
 import lk.ijse.healthcare.dao.custom.impl.PatientDaoImpl;
 
@@ -14,7 +15,10 @@ public class DaoFactory {
             case DOCTOR:
                 return (T) new DoctorDaoImpl();
             case PATIENT:
+
                 return (T) new PatientDaoImpl();
+            case APPOINTMENT:
+                return (T) new AppointmentDaoImpl();
             default:
                 return null;
         }
