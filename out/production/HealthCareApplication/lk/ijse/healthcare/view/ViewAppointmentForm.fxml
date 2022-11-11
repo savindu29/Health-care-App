@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ViewAppointmentFormContext" prefHeight="730.0" prefWidth="1162.0" style="-fx-background-color: white;" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.healthcare.controller.ViewAppointmentFormController">
+   <children>
+      <Label layoutX="402.0" layoutY="27.0" prefHeight="70.0" prefWidth="362.0" text="All Appointments">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAppointments" layoutX="66.0" layoutY="141.0" prefHeight="518.0" prefWidth="1049.0">
+        <columns>
+          <TableColumn fx:id="colNumber" prefWidth="159.20001220703125" text="Appointment Number" />
+          <TableColumn fx:id="colDoctorId" prefWidth="172.00006103515625" text="Doctor Id" />
+            <TableColumn fx:id="colPatientId" prefWidth="244.79998779296875" text="Patient ID" />
+            <TableColumn fx:id="colDate" prefWidth="214.4000244140625" text="Date" />
+            <TableColumn fx:id="colOption" prefWidth="214.4000244140625" text="Option" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
