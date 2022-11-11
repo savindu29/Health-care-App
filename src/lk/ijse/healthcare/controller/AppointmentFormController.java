@@ -11,9 +11,11 @@ import lk.ijse.healthcare.bo.custom.PatientBo;
 import lk.ijse.healthcare.dto.AppointmentDto;
 import lk.ijse.healthcare.dto.DoctorDto;
 import lk.ijse.healthcare.dto.PatientDto;
+import lk.ijse.healthcare.entity.Appointment;
 import lk.ijse.healthcare.entity.Doctor;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class AppointmentFormController {
     public AnchorPane appointmentFormContext;
@@ -34,6 +36,7 @@ public class AppointmentFormController {
     private PatientBo boP = BoFactory.getInstance().getBo(BoTypes.PATIENT);
     public void initialize(){
         loadCodes("");
+        setAppointmentNumber();
 
         cmbDoctor.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if(null!=newValue){
@@ -97,6 +100,7 @@ public class AppointmentFormController {
             boolean isSaved =boA.saveAppointment(dto);
             if (isSaved) {
                 clear();
+                setAppointmentNumber();
                 new Alert(Alert.AlertType.INFORMATION, "Placed Appointment!..").show();
             } else {
                 new Alert(Alert.AlertType.WARNING, "Try Again!..").show();
@@ -113,5 +117,22 @@ public class AppointmentFormController {
         txtPatient.clear();
         txtPatientTel.clear();
         txtAppointmentNumber.clear();
+        cmbPatient.setValue(null);
+        cmbDoctor.setValue(null);
+        datePicker.setValue(null);
+
+    }
+
+    private void  setAppointmentNumber() {
+        ArrayList<AppointmentDto> appointments = new ArrayList<>();
+        try {
+            appointments = boA.searchAppointment("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String num = String.format("%03d" , appointments.size()+1);
+        txtAppointmentNumber.setText("A"+num);
+
     }
 }

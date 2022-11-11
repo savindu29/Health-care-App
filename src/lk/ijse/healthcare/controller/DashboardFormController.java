@@ -46,6 +46,9 @@ public class DashboardFormController {
     public void newAppointmentBtnOnAction(ActionEvent actionEvent) throws IOException {
         loadForm("AppointmentForm");
     }
+    public void viewAppointmentBtnOnAction(ActionEvent actionEvent) throws IOException {
+        loadForm("ViewAppointmentForm");
+    }
 
 
     public void patientBtnOnAction(ActionEvent actionEvent) throws IOException {

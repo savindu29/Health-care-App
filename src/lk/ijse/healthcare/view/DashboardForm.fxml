@@ -27,7 +27,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="documentbtn" layoutX="17.0" layoutY="555.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="247.0" style="-fx-background-color: none;" text="Documents" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="documentbtn" layoutX="17.0" layoutY="555.0" mnemonicParsing="false" onAction="#viewAppointmentBtnOnAction" prefHeight="64.0" prefWidth="247.0" style="-fx-background-color: none;" text="All Appointments" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
