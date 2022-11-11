@@ -7,5 +7,5 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface AppointmentDao extends CrudDAO<Appointment,String> {
-    public ArrayList<Appointment> searchDoctors(String text) throws SQLException, ClassNotFoundException;
+    public ArrayList<Appointment> searchAppointment(String text) throws SQLException, ClassNotFoundException;
 }

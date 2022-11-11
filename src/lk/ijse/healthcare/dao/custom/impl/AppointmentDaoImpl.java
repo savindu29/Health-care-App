@@ -37,7 +37,7 @@ public class AppointmentDaoImpl implements AppointmentDao {
     }
 
     @Override
-    public ArrayList<Appointment> searchDoctors(String text) throws SQLException, ClassNotFoundException {
+    public ArrayList<Appointment> searchAppointment(String text) throws SQLException, ClassNotFoundException {
         String searchText = "%"+text+"%";
 
 

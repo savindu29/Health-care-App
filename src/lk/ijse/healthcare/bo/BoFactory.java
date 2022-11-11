@@ -1,5 +1,6 @@
 package lk.ijse.healthcare.bo;
 
+import lk.ijse.healthcare.bo.custom.impl.AppointmentBoImpl;
 import lk.ijse.healthcare.bo.custom.impl.DoctorBoImpl;
 import lk.ijse.healthcare.bo.custom.impl.PatientBoImpl;
 
@@ -15,6 +16,8 @@ public class BoFactory {
                 return (T) new DoctorBoImpl();
             case PATIENT:
                 return (T) new PatientBoImpl();
+            case APPOINTMENT:
+                return (T) new AppointmentBoImpl();
             default: return null;
         }
     }
